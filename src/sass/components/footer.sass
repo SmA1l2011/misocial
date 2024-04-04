@@ -1,0 +1,235 @@
+footer .menu-line
+    margin-bottom: 15px
+    justify-content: center
+    +media(768)
+        justify-content: space-between
+    &__title
+        color: #37374a
+    &__link
+        color: $copy
+        &:hover
+            color: #756edc
+    &__button 
+        font-size: 12px
+        letter-spacing: 1px
+        text-transform: uppercase
+        font-weight: 700
+        font-family: "Maven Pro"
+        text-align: center
+        min-width: 100px
+        border: unset
+        background: $primary
+        color: $textLight
+        border-radius: 20px
+        text-align: center
+        padding: 10px 0
+        transition: all 0.3s ease
+        +media(1024)
+            min-width: 150px
+            border-radius: 25px
+            padding: 15px 0
+        +media(2560)
+            min-width: 200px
+            border-radius: 40px
+            padding: 20px 0
+        &:hover
+            border: unset
+            box-shadow: 0px 0px 20px 0px $primary
+            background: $textLight
+            transform: scale(1.05)
+    &__menu
+        display: none
+        position: absolute
+        top: -100%
+        +media(768)
+            display: flex
+            position: unset
+            top: unset
+
+    &__burger
+        display: none
+hr 
+    opacity: 0.200
+    width: calc( 100% - 30px )
+    margin: auto
+    height: 1px
+    background-color: #bdbdc2
+    margin-bottom: 15px
+    +media(768)
+        width: calc( 100% - 40px )
+    +media(1024)
+        width: calc( 100% - 70px )
+    +media(1440)
+        width: calc( 100% - 100px )
+.footer-line
+    justify-content: center
+    flex-wrap: wrap
+    padding: 15px 
+    margin-bottom: 10px
+    +media(768)
+        padding: 15px 20px
+        justify-content: space-between
+    +media(1024)
+        padding: 15px 35px
+    +media(1440)
+        padding: 15px 50px
+    &__copy
+        opacity: 0.502
+        font-size: 8.8px
+        line-height: 19px
+        color: $copy
+        font-weight: 500
+        font-family: "Maven Pro"
+        margin-bottom: 10px
+        +media(375)
+            font-size: 10.5px
+        +media(425)
+            font-size: 12px
+        +media(768)
+            font-size: 14px
+            margin-bottom: unset
+    &__social
+        list-style: none
+        column-gap: 15px
+        &-fb
+            position: relative
+            &::before
+                content: ''
+                position: absolute
+                top: -7%
+                left: 1%
+                width: 16px
+                height: 16px
+                background: url(../img/fb.svg)
+                transition: all 1s ease
+                z-index: -1
+            &::after
+                content: ''
+                position: absolute
+                top: -7%
+                left: 1%
+                width: 16px
+                height: 16px
+                background: url(../img/fb_two.svg)
+                transform: scale(0)
+                transition: all 1s ease
+                z-index: -2
+            &:hover::before
+                transform: scale(0)
+                z-index: -3
+            &:hover::after
+                transform: scale(1)
+            &:hover .social-icons
+                stroke-dashoffset: 220px
+                opacity: 0.5
+                stroke: $primary
+        &-tw
+            position: relative
+            &::before
+                content: ''
+                position: absolute
+                top: -7%
+                left: 1%
+                width: 16px
+                height: 16px
+                background: url(../img/tw.svg)
+                transition: all 1s ease
+                z-index: -1
+            &::after
+                content: ''
+                position: absolute
+                top: -7%
+                left: 1%
+                width: 16px
+                height: 16px
+                background: url(../img/tw_two.svg)
+                transform: scale(0)
+                transition: all 1s ease
+                z-index: -2
+            &:hover::before
+                transform: scale(0)
+                z-index: -3
+            &:hover::after
+                transform: scale(1)
+            &:hover .social-icons
+                stroke-dashoffset: 220px
+                opacity: 0.5
+                stroke: $primary
+        &-google
+            position: relative
+            &::before
+                content: ''
+                position: absolute
+                top: -7%
+                left: -2%
+                width: 16px
+                height: 16px
+                background: url(../img/google-plus.svg)
+                transition: all 1s ease
+                z-index: -1
+            &::after
+                content: ''
+                position: absolute
+                top: -7%
+                left: -2%
+                width: 16px
+                height: 16px
+                background: url(../img/google-plus_two.svg)
+                transform: scale(0)
+                transition: all 1s ease
+                z-index: -2
+            &:hover::before
+                transform: scale(0)
+                z-index: -3
+            &:hover::after
+                transform: scale(1)
+            &:hover .social-icons
+                stroke-dashoffset: 220px
+                opacity: 0.5
+                stroke: $primary
+        &-inst
+            position: relative
+            &::before
+                content: ''
+                position: absolute
+                top: -7%
+                left: 1%
+                width: 16px
+                height: 16px
+                background: url(../img/inst.svg)
+                transition: all 1s ease
+                z-index: -2
+            &::after
+                content: ''
+                position: absolute
+                top: -7%
+                left: 1%
+                width: 16px
+                height: 16px
+                background: url(../img/inst_two.svg)
+                transform: scale(0)
+                transition: all 1s ease
+                z-index: -1
+            &:hover::before
+                transform: scale(0)
+            &:hover::after
+                transform: scale(1)
+            &:hover .social-icons
+                stroke-dashoffset: 220px
+                opacity: 0.5
+                stroke: $primary
+.social-icons
+    width: 32px
+    height: 32px
+    transition: all 1s ease
+    border-radius: 25%
+    opacity: 0.502
+    fill: none
+    stroke: $copy
+    stroke-width: 1px
+    stroke-dasharray: 110px 
+    stroke-linecap: round
+    +media(768)
+        width: 16px
+        height: 16px
+        

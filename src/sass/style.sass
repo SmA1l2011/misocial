@@ -1,0 +1,238 @@
+@import helpers/vars
+@import helpers/mixins
+html
+    font-size: 1px
+.hidden
+    display: none
+body
+    font-size: 16rem
+html,
+body
+    scroll-behavior: smooth
+sup
+    font-size: 15rem
+main
+    padding: 120px 0 0 0
+    & .wrapper 
+        padding: 0 10px
+        +media(1440)
+            width: 95%
+            margin: auto
+        +media(2560)
+            width: 65%
+            margin: auto
+.main-content
+    &__promo
+        position: relative
+        width: 70px
+        margin: auto
+        font-size: 14px
+        letter-spacing: 1px
+        line-height: 32px
+        text-transform: uppercase
+        color: $textDark
+        font-weight: 700
+        font-family: "Maven Pro"
+        &::before
+            content: ''
+            position: absolute
+            top: 50%
+            left: -40px
+            width: 24px
+            height: 1px
+            background-color: $primary
+        &::after
+            content: ''
+            position: absolute
+            top: 50%
+            right: -40px
+            width: 24px
+            height: 1px
+            background-color: $primary
+    &__title 
+        font-size: 50px
+        letter-spacing: -2px
+        line-height: 72px
+        color: #4f4f6f
+        font-weight: 500
+        font-family: "Maven Pro"
+        text-align: center
+        margin-bottom: 20px
+        +media(425)
+            font-size: 60px
+    &__desc
+        max-width: 390px
+        line-height: 28px
+        color: #9fa4af
+        font-weight: 400
+        font-family: "Maven Pro"
+        text-align: center
+        margin: auto
+        margin-bottom: 100px
+.broshure
+    padding-bottom: 110px
+    &__card
+        display: flex
+        align-items: center
+        flex-direction: column
+        border-radius: 30px
+        background-color: $textLight
+        border: 1px solid $buttonborder
+        max-width: 440px
+        margin: auto
+        padding: 30px 0 35px 0
+        margin-bottom: 10px
+        transition: all 0.3s ease
+        +media(375)
+            padding: 30px 10px 35px 10px
+        +media(1024)
+            padding: 60px 70px 65px 70px
+        &:hover
+            filter: drop-shadow(0 0 46px rgba(204,204,223,0.71))
+            border: 1px solid transparent
+        &-button 
+            min-width: 190px
+            border-radius: 25px
+            padding: 8.4px 0
+            filter: drop-shadow(0 0 10.5px rgba(204,204,223,0.5))
+            background: $textLight
+            border: 1px solid $buttonborder
+            font-size: 12px
+            letter-spacing: 1px
+            line-height: 32px
+            text-transform: uppercase
+            text-decoration: none
+            color: $buttontext
+            font-weight: 700
+            font-family: "Maven Pro"
+            text-align: center
+            transition: all .3s cubic-bezier(0,.19,1,.73)
+            &::before
+                position: absolute
+                content: ""
+                opacity: 0
+                width: 0
+                height: 100%
+                top: 0
+                right: 0
+                z-index: -1
+                background-color: $primary
+                border-radius: 25px
+                transition: all .3s cubic-bezier(0,.19,1,.73)
+            &:hover::before
+                opacity: 1
+                left: 0
+                width: 100%
+            &:hover
+                color: $textLight
+                border: 1px solid transparent
+                filter: drop-shadow(0 0 0px rgba(0,0,0,0))
+        &-img 
+            height: 110px
+            margin-bottom: 50px
+        &-title
+            font-size: 14px
+            letter-spacing: 1px
+            line-height: 32px
+            text-transform: uppercase
+            color: $textDark
+            font-weight: 700
+            font-family: "Maven Pro"
+        &-sell b 
+            position: relative
+            font-weight: 500
+            &::before
+                content: '$'
+                position: absolute
+                font-size: 17px
+                top: -20%
+                left: -20%
+        &-sell,
+        &-sell-date
+            position: relative
+            display: inline-block
+            font-size: 60px
+            letter-spacing: -2px
+            line-height: 72px
+            color: #4f4f6f
+            font-family: "Maven Pro"
+            text-align: center
+            &-date 
+                font-size: 20px
+                font-style: normal
+                letter-spacing: 0
+        &-desc 
+            display: block
+            line-height: 28px
+            color: $textDark
+            font-weight: 400
+            font-family: "Maven Pro"
+            text-align: center
+        &-desc-last
+            margin-bottom: 50px
+                
+.main-flex 
+    display: flex
+    justify-content: center
+    column-gap: 30px
+    align-items: center
+    flex-wrap: wrap
+    +media(1440)
+        justify-content: space-between
+        column-gap: unset
+.main-info 
+    background: url(../img/background-two.jpg) no-repeat center/cover
+    padding: 80px 0
+    +media(768)
+        padding: 188px 0
+    &__promo
+        text-align: center
+        font-size: 14px
+        letter-spacing: 1px
+        line-height: 32px
+        text-transform: uppercase
+        color: $textLight
+        font-weight: 700
+        font-family: "Maven Pro"
+    &__title
+        text-align: center
+        font-size: 30px
+        letter-spacing: -2px
+        color: #ffffff
+        font-weight: 500
+        font-family: "Maven Pro"
+        text-align: center
+        margin-bottom: 20px
+        +media(768)
+            font-size: 60px
+    &__nav
+        text-align: center
+        &-button
+            position: relative
+            display: inline-block
+            min-width: 190px
+            padding: 15.5px 0
+            font-size: 12px
+            letter-spacing: 1px
+            text-transform: uppercase
+            color: $buttontext
+            font-weight: 700
+            font-family: "Maven Pro"
+            text-align: center
+            text-decoration: none
+            border-radius: 25px
+            filter: drop-shadow(0 0 10.5px rgba(204,204,223,0.5))
+            background: url(../img/button_hover.svg)
+            border: 1px solid $buttonborder
+            margin-bottom: 10px
+            transition: background-position 2s ease, filter .5s ease, color .5s ease, border .5s ease 1.5s
+            &:hover
+                background-position: 65% 65%
+                filter: drop-shadow(0 0 10.5px rgba(0,0,0,0))
+                color: $textLight
+                border: 1px solid $primary
+            &-first
+                +media(425)
+                    margin-right: 10px
+@import  components/header
+@import  components/footer

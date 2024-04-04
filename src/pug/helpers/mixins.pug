@@ -1,0 +1,36 @@
+mixin menu-line 
+    .menu-line.flex
+        a.menu-line__logo.flex(href="index.html#header") 
+            img.menu-line__logo-img(src="img/logo.svg", alt="#")
+            b.menu-line__title MISOCIAL
+        .menu-line__burger
+            .menu-line__burger-line
+        ul.menu-line__menu.flex
+            li
+                a.menu-line__link(href="#") Home
+            li
+                a.menu-line__link(href="#") Why MISOCIAL
+            li
+                a.menu-line__link(href="#") Features
+            li
+                a.menu-line__link(href="#") Articles
+            li
+                a.menu-line__link(href="#") Pricing
+            li
+                a.menu-line__link.menu-line__button(href="#") get started  
+mixin card(sell, svg)
+    figure
+        figcaption.broshure__card
+            <svg class="broshure__card-img">
+                <use xlink:href=#{svg}></use>
+            </svg>
+            h3.broshure__card-title personal
+            p.broshure__card-sell
+                b= sell
+                i.broshure__card-sell-date.broshure__card-sell-date-first /month
+            p.broshure__card-desc Lorem ipsum dolor sit amet.
+            p.broshure__card-desc sed do eiusmod tempor incididunt ut.
+            p.broshure__card-desc Labore et dolore magna aliqua.
+            p.broshure__card-desc quis nostrud exercitation ullamco laboris.
+            p.broshure__card-desc.broshure__card-desc-last Ea commodo consequat 
+            a.broshure__card-button(href="#") select plan

@@ -1,0 +1,251 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+.header 
+    background: $gradientBg, $gradientStart url(../img/background.jpg) no-repeat center
+    background-size: cover 
+
+.flex 
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.menu-line
+    padding: 15px 
+    column-gap: 10%
+    +media(768)
+        padding: 15px 20px
+    +media(1024)
+        padding: 15px 35px
+    +media(1440)
+        column-gap: 25%
+        padding: 15px 50px
+    +media(2560)
+        column-gap: 40%
+    &__logo
+        text-decoration: none
+        column-gap: 15px
+        font-size: 30rem
+    &__logo-img 
+        width: 38px
+        z-index: 3
+        +media(1024)
+            width: unset
+    &__title 
+        z-index: 3
+        font-size: 25px
+        letter-spacing: 6px
+        line-height: 29px
+        color: $textLight
+        font-weight: 700
+        font-family: "Maven Pro"
+        +media(1024)
+            font-size: 30px
+    &__menu
+        display: none
+        position: absolute
+        top: 15%
+        left: 0
+        list-style: none
+        padding: 15px
+        width: 100%
+        +media(768)
+            display: flex
+            position: unset
+            top: unset
+            padding: 15px 0
+        &_active
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            justify-content: space-between
+        &::before
+            content: ''
+            position: absolute
+            width: 100vw
+            height: 350px
+            top: -27%
+            left: 0
+            background: $gradientBg, $gradientStart url(../img/background.jpg) no-repeat center
+            background-size: cover  
+            border-bottom: 3px solid $textLight
+            z-index: 2
+            +media(768)
+                content: none
+    &__link 
+        z-index: 3
+        position: relative
+        display: block
+        font-size: 13px
+        line-height: 19px
+        color: $textLight
+        font-weight: 500
+        font-family: "Maven Pro"
+        text-decoration: none
+        padding: 10px 0
+        +media(1024)
+            font-size: 16px
+        +media(2560)
+            font-size: 20px
+        &::before
+            content: ''
+            position: absolute
+            top: 100%
+            left: 50%
+            width: 0
+            height: 1px
+            background-color: $textLight
+            transition: all 0.3s ease
+        &:hover::before
+            width: calc( 100% + 50px )
+            left: calc( 0% - 25px )
+    &__button 
+        font-size: 12px
+        letter-spacing: 1px
+        text-transform: uppercase
+        color: $textLight
+        font-weight: 700
+        font-family: "Maven Pro"
+        text-align: center
+        min-width: 100px
+        border: 1px solid $textLight
+        border-radius: 20px
+        text-align: center
+        padding: 10px 0
+        transition: all 0.3s ease
+        +media(1024)
+            font-size: 12px
+            min-width: 150px
+            border-radius: 25px
+            padding: 15px 0
+        +media(2560)
+            min-width: 200px
+            border-radius: 40px
+            padding: 20px 0
+        &::before
+            content: none
+        &:hover 
+            background-color: $gradientStart
+            border: 1px solid transparent
+            +media(768)
+               background-color: $gradientEnd 
+    &__burger
+        z-index: 3
+        display: flex
+        align-items: center
+        position: relative
+        width: 35px
+        height: 25px
+        +media(768)
+            display: none
+    &__burger-line
+        position: relative
+        &,
+        &::before,
+        &::after
+            position: absolute
+            width: 100%
+            height: 5px
+            background-color: $textLight
+            border-radius: 3px
+        &::before
+            content: ''
+            top: 10px
+            left: 0
+        &::after
+            content: ''
+            top: -10px
+            left: 0
+
+.section-content
+    padding: 100px 0 50px 0
+    +media(1024)
+        padding: 145px 0 50px 0
+    &__promo
+        width: 300px
+        position: relative 
+        font-size: 14px
+        letter-spacing: 1px
+        line-height: 32px
+        text-transform: uppercase
+        color: $textLight
+        font-weight: 700
+        font-family: "Maven Pro"
+        margin: auto
+        text-align: center
+        &::before
+            +media(425)
+                content: ''
+                position: absolute
+                top: 50%
+                left: -15px
+                width: 24px
+                height: 1px
+                background-color: $textLight
+        &::after
+            +media(425)
+                content: ''
+                position: absolute
+                top: 50%
+                right: -15px
+                width: 24px
+                height: 1px
+                background-color: $textLight
+    &__desc
+        line-height: 28px
+        color: $textLight
+        font-weight: 400
+        font-family: "Maven Pro"
+        margin: auto
+        text-align: center
+        max-width: 390px
+        margin-bottom: 100px
+        +media(1024)
+            margin-bottom: 180px
+    &__arrow
+        display: flex
+        align-items: center
+        justify-content: center
+        margin: auto
+        width: 64px
+        height: 64px
+        border-radius: 32px
+        background-color: $textLight
+        transition: all 0.3s ease
+        &:hover
+            filter: drop-shadow(0 0 10.5px rgba(204,204,223,0.5))
+            transform: scale(1.1)
+        &-icon
+            display: block
+            position: relative
+            width: 10px
+            height: 10px
+            border-left: 2px solid #9fa4af
+            border-bottom: 2px solid #9fa4af
+            transform: rotate(-45deg)
+            &::before
+                content: ''
+                position: absolute
+                width: 2px
+                height: 15px
+                top: -40%
+                left: 37%
+                background: #9fa4af
+                transform: rotate(45deg)
+
+.header-content
+    &__title
+        font-size: 50px
+        color: $textLight
+        font-weight: 500
+        font-family: "Maven Pro"
+        text-align: center
+        margin-bottom: 20px
+        +media(425)
+            font-size: 55px
+            letter-spacing: -1px
+        +media(768)
+            font-size: 86px
+            letter-spacing: -3px
